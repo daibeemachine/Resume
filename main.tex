@@ -1,0 +1,157 @@
+% !TEX root = main.tex
+
+% Formatting packages
+\documentclass{article}
+\usepackage{graphicx} % Required for inserting images
+\usepackage[margin=0pt]{geometry}
+\usepackage[most]{tcolorbox}
+\usepackage{paracol}
+\usepackage{blindtext}
+\usepackage{ragged2e}
+\usepackage{setspace}
+\usepackage{titlesec}
+% Font packages
+\usepackage[scaled]{helvet}
+\usepackage[T1]{fontenc}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fontawesome5}
+
+% Misc packages
+\usepackage{lipsum}
+\usepackage{xcolor}
+
+
+% Title
+\title{ResumeRedone}
+\author{makka }
+\date{January 2026}
+
+%Import Helvetica
+\renewcommand\familydefault{\sfdefault}
+\setlength{\parindent}{0pt}
+\renewcommand\familydefault{\sfdefault}
+
+
+% Removes column spacing in paracol
+\setlength{\columnsep}{0pt}
+
+% Tcolorbox definitions
+\newtcolorbox{yellowline}{breakable, colback=yellow!30, height fill, sharp corners, frame empty, boxrule=0pt}
+
+% Custom command definitions
+%% Makes a divider between sections in the resume portion
+\newcommand{\makedivider}[1]{\textcolor{black!20}{\rule{\textwidth}{#1}}}%
+%% Formats a date for a project, job, etc
+\newcommand{\dateto}[1]{
+\normalsize
+\textnormal{\hfill#1}}%
+
+\begin{document}
+\setcolumnwidth{0.05\textwidth, 0.95\textwidth}
+\begin{paracol}{3}
+    
+        
+    \begin{yellowline}
+    \end{yellowline}%
+    \begin{yellowline}
+    \end{yellowline}%
+    \switchcolumn
+
+    % Name and socials
+    \begin{tcolorbox}[colback=white, sharp corners, colframe=white, top=0.5in]%
+        \centering
+        {\fontsize{60}{8}\selectfont
+        \textbf{Anton Olson}}\\[0.25in]
+        \textcolor{darkgray}{\fontsize{12}{8}\selectfont
+        \raisebox{-0.1\height}{\faPhone}\hspace{0.075in}(612) 210-1542
+        |
+        \raisebox{-0.1\height}{\faEnvelope}\hspace{0.075in}\href{mailto:antonalementiolson@gmail.com}{antonalementiolson@gmail.com}
+        |
+        \raisebox{-0.1\height}{\faLinkedin}\hspace{0.075in}\href{https://www.linkedin.com/in/antonaolson/}{antonaolson} 
+        |
+        \raisebox{-0.1\height}{\faGithub}\hspace{0.075in}\href{https://github.com/daibeemachine}{daibeemachine} 
+        }
+    \end{tcolorbox}%
+
+    % Background, Experience, etc
+    \begin{tcolorbox}[colback=white, left=0.5in, right =0.5in, top=0.1in, breakable, colframe=white]
+    \titleformat{\section}{\normalfont\fontsize{20}{8}\selectfont\bfseries}{}{}{\vspace{0.2in}}[]
+    \titleformat{\subsection}{\normalfont\fontsize{14}{8}\selectfont\bfseries}{}{}{}[]
+    \titlespacing{\subsection}{0in}{0.1in}{0.1in}
+    \vspace{0.1in}
+    \makedivider{0.05in}
+    
+    \fontsize{12}{8}\selectfont
+    \section*{Education}
+    \subsection*{Bachelor of Arts (B.A.), University of Minnesota Morris \dateto{Aug 2024 - May 2026 (Expected)}}
+    \vspace{0.1in}
+    \begin{itemize}
+        \item Majors: Computer Science, Psychology
+        \item GPA: 3.898
+        \item Dean's List: Fall 2024, Spring 2025, Fall 2025
+    \end{itemize}
+
+    \vspace{0.25in}
+    \makedivider{0.05in}
+    \section*{Leadership}
+    \subsection*{Computer Science Student Representative\dateto{May 2025 - May 2026}}
+    \begin{itemize}
+        \item Collaborated with the University of Minnesota Morris Computer Science discipline to manage events and logistics
+        \item Served as a representative for students of the Computer Science discipline, advocating for discipline and division-wide policy that best supports students' learning and well-being
+        \item Assisted in the evaluation of transfer courses
+    \end{itemize}
+    \subsection*{Software Design and Development Teaching Assistantship\dateto{January 2026 - May 2026}}
+    \begin{itemize}
+        \item Updated lab assignments, managed GitHub repositories, assisted in upgrading dependencies, and ensured proper upkeep of class material
+        \item Assisted in grading of written and lab assignments
+        \item Aided students during lab sessions, supporting students in debugging code and progressing through lab assignments
+    \end{itemize}
+    \subsection*{\textit{Telling the CSCI Story}\dateto{February 2025 - December 2026}}
+    \begin{itemize}
+        \item Co-led an interdisciplinary Computer Science and Communications project documenting reflections from Computer Science alumni during and after their time at the University of Minnesota Morris
+        \item Compiled 1-5 minute-long interviews with Adobe Premiere Pro, correcting lighting, color contrast, and volume
+        \item Eliminated background noise from raw interview footage using Audacity
+        \item Designed fluid animations and video elements with Adobe After Effects
+        \item Organized a student-led discussion of the themes and topics discussed within alumni interviews
+    \end{itemize}
+    
+    \vspace{0.25in}
+    \makedivider{0.05in}
+    \section*{Projects}
+    \subsection*{{Web-Based Social Card Game Simulator}\dateto{Jan 2025 - May 2025}}
+    \begin{itemize}
+        \item Employed an Agile development format, developing workable iterations of a piece of software in three two-week sprints tailored to a customer's specifications
+        \item Built a full-stack web-based application, incorporating Angular.js and Typescript for front-end development and a combination of MongoDB and Java for back-end database management
+        \item Collaborated with teams of 4-7 people, coordinating GitHub repository management, managing communication over email and Discord, and balancing schedules to produce a quality, user-friendly piece of software
+    \end{itemize}
+    \subsection*{{Voice Recognition with TinyML}\dateto{Sep 2025 - Dec 2025}}
+    \begin{itemize}
+        \item Used Tensorflow Lite and Google Colab to train and deploy a speech-recognition neural network on Harvard edX's TinyML development board 
+        \item Trained speech-recognition neural network on custom voice lines to recognize specific phrases
+    \end{itemize}
+
+    \vspace{0.25in}
+    \makedivider{0.05in}
+    
+    \section*{Work Experience}
+    \subsection*{Jimmy Johns {}\dateto{Jun 2023 - Jul 2024}}
+    \textbf{Opening/Closing Manager}
+    \begin{itemize}
+        \item Ran 3-6 person, 8-hour shifts, ensuring timely and satisfactory customer experience within a fast-paced work environment
+        \item Resolved customer complaints, balanced employee availability, and delegated tasks under strict time constraints
+        \item Assisted in managing store inventory and employees' schedules
+    \end{itemize}
+    \subsection*{Jimmy Johns {}\dateto{Sep 2022 - Jun 2023}}
+    \textbf{Employee}
+    \begin{itemize}
+        \item Balanced time between sandwich-making, cleaning, and customer interaction 
+        \item Coordinated tasks with shift lead, delivery drivers, and other employees to ensure smooth shift operation
+    \end{itemize}
+    
+    
+    
+\end{tcolorbox}
+
+    
+\end{paracol}
+\end{document}
