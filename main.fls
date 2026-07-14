@@ -1,6 +1,6 @@
-PWD c:\Users\theme\OneDrive\Documentos\Repositories\Resume
+PWD C:\Users\theme\MyDocuments\Resume
 INPUT C:\Users\theme\AppData\Local\MiKTeX\miktex\data\le\pdftex\pdflatex.fmt
-INPUT c:\Users\theme\OneDrive\Documentos\Repositories\Resume\main.tex
+INPUT main.tex
 OUTPUT main.log
 INPUT C:\Users\theme\AppData\Local\Programs\MiKTeX\tex\latex\base\article.cls
 INPUT C:\Users\theme\AppData\Local\Programs\MiKTeX\tex\latex\base\article.cls
